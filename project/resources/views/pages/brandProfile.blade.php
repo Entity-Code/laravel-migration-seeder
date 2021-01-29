@@ -12,4 +12,4 @@
 
     <img src="{{ $brand -> logo_url }}">
 
-@endsection
+@endsection 

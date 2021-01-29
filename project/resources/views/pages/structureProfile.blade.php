@@ -1,9 +1,9 @@
-@extends('layouts.main-layout');
+@extends('layouts.main-layout')
 
 @section('content')
 
     <h2>STRUCTURE ({{$structure -> id}})</h2>
-
+    
     <p>
         <strong>• Name: </strong> 
         {{$structure -> name}} <br>
@@ -17,4 +17,4 @@
            
     
 
-@endsection  
+@endsection 
