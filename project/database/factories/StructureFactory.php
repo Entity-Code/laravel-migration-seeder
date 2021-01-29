@@ -7,8 +7,8 @@ use Faker\Generator as Faker;
 
 $factory->define(Structure::class, function (Faker $faker) {
     return [
-        'name'              => $faker -> firstName(),
+        'name'              => $faker -> company(),
         'address'           => $faker -> address(),
-        'workers_number'    =>           rand(1,1000)
+        'workers_number'    =>           rand(1,1000) 
     ];
 }); 

@@ -1,18 +1,28 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+//home
+Route::get('/', 'BrandController@index')
+    -> name('brand-index');
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
+//marks
+Route::get('/homeBrands', 'BrandController@index')
+    -> name('brand-index');
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/brandProfile/{id}', 'BrandController@show') 
+    -> name('brand-show');
+
+//workers
+Route::get('/homeWorkers', 'WorkerController@index')
+    -> name('worker-index');
+
+Route::get('/workerProfile/{id}', 'WorkerController@show')
+    -> name('worker-profile'); 
+
+//structures
+Route::get('/homeStructures', 'StructureController@index')
+    -> name('structure-index');
+
+Route::get('/structureProfile/{id}', 'StructureController@show')
+    -> name('structure-profile');
+

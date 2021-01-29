@@ -9,16 +9,16 @@ class CreateStructuresTable extends Migration
     /**
      * Run the migrations.
      *
-     * @return void
+     * @return void 
      */
     public function up()
     {
         Schema::create('structures', function (Blueprint $table) {
-            $table->id();
+            $table->id(); 
 
             $table -> string('name', 50);
             $table -> string('address', 100);
-            $table -> smallInteger('workers_number');
+            $table -> smallInteger('workers_number') -> unsigned();
 
             $table->timestamps();
         });
